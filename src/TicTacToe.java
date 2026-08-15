@@ -18,7 +18,7 @@ public class TicTacToe {
     **/
     public static int alphaBeta(Board board, int player)
     {
-        return playerMax(board,-111,111,player, board.getN()*board.getN()-board.nFreeFields());
+        return playerMax(board,Integer.MIN_VALUE,Integer.MAX_VALUE,player, board.getN()*board.getN()-board.nFreeFields());
     }
 
     private static int playerMax(Board game, int alpha, int beta, int player, int depth) {
